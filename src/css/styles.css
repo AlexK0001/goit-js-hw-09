@@ -4,8 +4,7 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
-@import url('./vite-promo.css');
+
 @import url('./header.css');
 @import url('./1-gallery.css')
 
@@ -14,6 +13,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  text-size-adjust: auto;
 
   color: #242424;
   background-color: rgba(255, 255, 255, 0.87);
