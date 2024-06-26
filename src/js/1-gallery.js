@@ -86,7 +86,7 @@ function createMarkup(arr) {
     `).join('')
 }
 
-list.insertAdjacentHTML('afterbegin', createMarkup(images));
+// list.insertAdjacentHTML('afterbegin', createMarkup(images));
 
 const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',

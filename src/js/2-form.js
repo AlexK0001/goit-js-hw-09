@@ -6,6 +6,11 @@ let formData = {
   message: ''
 };
 
+const trimFormValues = () => {
+  formData.email = formData.email.trim();
+  formData.message = formData.message.trim();
+};
+
 window.addEventListener('DOMContentLoaded', () => {
   const savedData = localStorage.getItem(STORAGE_KEY);
   if (savedData) {
@@ -17,11 +22,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
 form.addEventListener('input', event => {
   formData[event.target.name] = event.target.value;
+  trimFormValues();
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 });
 
 form.addEventListener('submit', event => {
   event.preventDefault();
+  trimFormValues();
   if (formData.email === '' || formData.message === '') {
     alert('Fill please all fields');
   } else {
